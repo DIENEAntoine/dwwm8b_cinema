@@ -101,7 +101,7 @@ session_start();
 
 
         // Effectuer la requête d'insertion des données dans la table "film" de la base données
-        $req = $db->prepare("INSERT INTO film (name, actors, review, created_at, updated_at) VALUES (:name, :actors, :review, now(), now() ) ");
+        $req = $db->prepare( "INSERT INTO film (name, actors, review, created_at, updated_at) VALUES (:name, :actors, :review, now(), now() ) " );
 
         $req->bindValue(":name",        $film_name);
         $req->bindValue(":actors",      $film_actors);
